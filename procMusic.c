@@ -27,7 +27,7 @@ void readPlayList(const char *str, Node *root) {
         fgets(buffer, size, playList);
         
         //find player._$load, insert into list
-        char *start = strstr(buffer, "player._$load");
+        char *start = strstr(buffer, "$load");
         char *md5 = strstr(buffer, "md5");
         if (!start || !md5)
             continue;
